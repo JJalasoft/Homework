@@ -11,7 +11,7 @@ words_to_count = args.word
 #---------------------
 filename = "romeo.txt"
 
-def remove_punctuation_from_file(filename):
+def remove_puncts_from_file(filename):
     file = open(filename, "r").read().lower()
 
     for punctuation in string.punctuation:
@@ -31,6 +31,6 @@ def words_counting(text):
         words_count[unrepeated] = counter
     return words_count
 
-text = remove_punctuation_from_file(filename)
-dict = words_counting(text)
-print(dict[str(words_to_count)])
+text = remove_puncts_from_file(filename)
+word_count = words_counting(text)
+print(word_count[str(words_to_count)])
