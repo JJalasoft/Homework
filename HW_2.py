@@ -1,5 +1,4 @@
 import argparse
-from cgitb import text
 import string
 
 
