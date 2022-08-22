@@ -28,16 +28,23 @@ class Hectors:
         print(">|")
 
     def delete_element(self, index=5001):
-        if index < self.__len:
+        if index < self.__len and index > 0:
             for j in range (index, self.__len):
-                pass
+                if j+1 == self.__len:
+                    self.__data[j+1] = ''
+                    self.__len -= 1
+                else:
+                    self.__data[j] = self.__data[j+1]
         else:
             print("Index out of range")
             
 
 x = Hectors(456,464,456, "asdfasd")
+x.show()
 print(x.length())
 x.add_element("sdfgs")
 x.show()
+print(x.length())
 x.delete_element(3)
+x.show()
 print(x.length())
